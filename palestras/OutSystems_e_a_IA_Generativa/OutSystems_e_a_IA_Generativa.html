@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutSystems e a IA Generativa | Repositório de Palestras</title>
+    <link rel="stylesheet" href="../../assets\css\main.css">
+    <link rel="stylesheet" href="../../assets\css\theme.css">
+    <style>
+        .recursos-lista {
+            margin-top: 2rem;
+        }
+        
+        .recurso-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .recurso-item h3 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background-color: var(--accent-color);
+            color: var(--btn-text);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .voltar {
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .participante {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .foto-participante {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .participante a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .participante a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>OutSystems e a IA Generativa</h1>
+                <div class="theme-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="theme-label">Modo Claro</span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="../../index.html" class="voltar">&larr; Voltar para a página inicial</a>
+
+            <section class="intro">
+                <h2>Descobre como a Gen AI evoluiu de tendência para ferramenta essencial no ensino e na indústria!</h2>
+                <p>Apresentação realizada em 15 de maio de 2025</p>
+                <div class="participante">
+                    <img src="photos/AnaPires.webp" alt="Foto de Ana Pires" class="foto-participante">
+                    <p>Palestrante: Ana Pires</p>
+                    <a href="https://www.linkedin.com/in/ana-pires-2875a8180/" target="_blank">LinkedIn de Ana Pires</a>
+                </div>
+                
+                <div class="participante">
+                    <img src="photos/GabrielPereira.webp" alt="Foto de Gabriel Pereira" class="foto-participante">
+                    <p>Palestrante: Gabriel Pereira</p>
+                    <a href="https://www.linkedin.com/in/gabriel-pereira-a79006292/" target="_blank">LinkedIn de Gabriel Pereira</a>
+                </div>
+                
+                <div class="participante">
+                    <img src="photos/EdgarRamos.webp" alt="Foto de Edgar Ramos" class="foto-participante">
+                    <p>Anfitrião: Edgar Ramos</p>
+                    <a href="https://www.linkedin.com/in/ragedsomar/" target="_blank">LinkedIn de Edgar Ramos</a>
+                </div>
+                
+                <div class="participante">
+                    <img src="photos/VeraTiago.webp" alt="Foto de Vera Tiago" class="foto-participante">
+                    <p>Moderadora: Vera Tiago</p>
+                    <a href="https://www.linkedin.com/in/veratiago/" target="_blank">LinkedIn de Vera Tiago</a>
+                </div>
+            </section>
+
+            <section class="recursos-lista">
+                <h2>Links e Recursos</h2>
+                
+                <div class="recurso-item">
+                    <h3>Frameworks Frontend Modernos</h3>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vue</span>
+                        <span class="tag">Svelte</span>
+                    </div>
+                    <ul>
+                        <li><a href="https://react.dev" target="_blank">React - Documentação Oficial</a></li>
+                        <li><a href="https://vuejs.org" target="_blank">Vue.js - O Framework Progressivo</a></li>
+                        <li><a href="https://svelte.dev" target="_blank">Svelte - Repensar a construção de UI</a></li>
+                        <li><a href="https://github.com/facebook/react/releases" target="_blank">React 19 - Notas de Lançamento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="recurso-item">
+                    <h3>Backend e APIs</h3>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                    <ul>
+                        <li><a href="https://nodejs.org" target="_blank">Node.js - JavaScript no Server-Side</a></li>
+                        <li><a href="https://fastapi.tiangolo.com" target="_blank">FastAPI - Framework Python de alta performance</a></li>
+                        <li><a href="https://graphql.org" target="_blank">GraphQL - Uma linguagem de consulta para APIs</a></li>
+                        <li><a href="https://thenewstack.io/api-trends-2025" target="_blank">Tendências de APIs para 2025</a></li>
+                    </ul>
+                </div>
+                
+                <div class="recurso-item">
+                    <h3>DevOps e Implantação</h3>
+                    <div class="tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.docker.com" target="_blank">Docker - Plataforma de Containerização</a></li>
+                        <li><a href="https://kubernetes.io" target="_blank">Kubernetes - Orquestração de Containers</a></li>
+                        <li><a href="https://github.com/features/actions" target="_blank">GitHub Actions - Automação de Workflow</a></li>
+                        <li><a href="https://vercel.com" target="_blank">Vercel - Plataforma de Implantação para Frontends</a></li>
+                    </ul>
+                </div>
+                
+                <div class="recurso-item">
+                    <h3>Apresentação e Slides</h3>
+                    <ul>
+                        <li><a href="https://github.com/anasilva/webdev-2025" target="_blank">Repositório da Apresentação</a></li>
+                        <li><a href="https://slides.com/anasilva/webdev-2025" target="_blank">Slides da Apresentação</a></li>
+                        <li><a href="https://youtube.com/watch?v=webdev2025" target="_blank">Gravação da Palestra</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Repositório de Palestras &copy; 2025</p>
+            <p>Contribua no <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="../../assets\js\theme-toggle.js"></script>
+</body>
+</html>
