@@ -89,10 +89,37 @@ input:checked + .slider:before {
 .theme-switch {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 #theme-label {
     font-size: 14px;
+}
+
+/* Estilo minimalista e responsivo para o botão de tema */
+.theme-icon {
+    background: none;
+    border: none;
+    font-size: 1.45rem;
+    cursor: pointer;
+    color: var(--accent-color, #0078d4);
+    transition: color 0.2s, transform 0.2s;
+    padding: 0.2em 0.4em;
+    border-radius: 50%;
+    outline: none;
+}
+
+.theme-icon:focus,
+.theme-icon:hover {
+    color: var(--primary-color, #333);
+    background: var(--card-bg, #eaeaea);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .theme-icon {
+        font-size: 1.23rem;
+        padding: 0.15em 0.3em;
+    }
 }
 
