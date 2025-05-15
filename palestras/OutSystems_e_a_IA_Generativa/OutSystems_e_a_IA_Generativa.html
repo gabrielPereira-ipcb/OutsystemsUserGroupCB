@@ -66,25 +66,130 @@
         .participante a:hover {
             text-decoration: underline;
         }
+
+        .theme-icon {
+            background: none;
+            border: none;
+            font-size: 1.45rem; /* 15% menor */
+            cursor: pointer;
+            margin-left: 0;
+            color: var(--accent-color);
+            transition: color 0.2s;
+            align-self: center; /* Garante alinhamento vertical */
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            position: relative;
+        }
+
+        .nav-top {
+            display: flex;
+            flex-direction: row;           /* Alinha horizontalmente */
+            justify-content: flex-end;     /* Vai para a direita */
+            align-items: center;           /* Centraliza verticalmente */
+            width: 100%;
+            padding: 0.5rem 1.2rem 0 1.2rem;
+            min-height: 48px;
+        }
+
+        .theme-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            padding: 0.5rem 0 0.7rem 0;
+        }
+
+        .nav-bottom h1 {
+            margin: 0;
+            font-size: 1.7rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .nav-top {
+                padding: 0.3rem 0.7rem 0 0.7rem;
+                min-height: 38px;
+            }
+            .nav-bottom h1 {
+                font-size: 1.1rem;
+            }
+            header nav {
+                padding: 0.7rem 0.7rem;
+                gap: 0.5rem;
+            }
+            h1 {
+                font-size: 1.1rem;
+            }
+            .theme-icon {
+                font-size: 1.23rem; /* 15% menor que 1.45rem */
+            }
+        }
+
+        nav.nav-horizontal {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+            gap: 1rem;
+        }
+
+        .theme-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-icon {
+            background: none;
+            border: none;
+            font-size: 1.45rem;
+            cursor: pointer;
+            color: var(--accent-color);
+            transition: color 0.2s;
+            align-self: center;
+        }
+
+        @media (max-width: 600px) {
+            nav.nav-horizontal {
+                padding: 0.5rem 0.5rem;
+            }
+            nav.nav-horizontal h1 {
+                font-size: 1.1rem;
+            }
+            .theme-icon {
+                font-size: 1.23rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- ...existing code... -->
         <header>
-            <nav>
+            <nav class="nav-horizontal">
                 <h1>OutSystems e a IA Generativa</h1>
                 <div class="theme-switch">
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider round"></span>
-                    </label>
+                    <button id="theme-toggle" class="theme-icon" aria-label="Alternar tema">🌙</button>
                     <span id="theme-label">Modo Claro</span>
                 </div>
             </nav>
         </header>
 
+
         <main>
-            <a href="../../index.html" class="voltar">&larr; Voltar para a página inicial</a>
+            <!-- <a href="../../index.html" class="voltar">&larr; Voltar para a página inicial</a> -->
 
             <section class="intro">
                 <h2>Descobre como a Gen AI evoluiu de tendência para ferramenta essencial no ensino e na indústria!</h2>
@@ -98,7 +203,7 @@
                 <div class="participante">
                     <img src="photos/GabrielPereira.webp" alt="Foto de Gabriel Pereira" class="foto-participante">
                     <p>Palestrante: Gabriel Pereira</p>
-                    <a href="https://www.linkedin.com/in/gabriel-pereira-a79006292/" target="_blank">LinkedIn de Gabriel Pereira</a>
+                    <a href="https://www.linkedin.com/in/ragedsomar/" target="_blank">LinkedIn de Edgar Ramos</a>
                 </div>
                 
                 <div class="participante">
@@ -130,7 +235,7 @@
                 </div>
                 
                 <div class="recurso-item">
-                    <h3>A IA generativa no trabalho.</h3>
+                    <h3>A IA generativa no trabalho</h3>
 
                     <ul>
                         <li><a href="https://www.outsystems.com/low-code-platform/mentor-ai-app-generation/" target="_blank">OutSystems Mentor AI</a></li>

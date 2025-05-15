@@ -1,30 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeLabel = document.getElementById('theme-label');
-    
-    // Verifica se há preferência salva no localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        if (savedTheme === 'light') {
-            themeToggle.checked = true;
-            themeLabel.textContent = 'Modo Escuro';
-        }
+    const html = document.documentElement;
+
+    function updateThemeUI() {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        themeLabel.textContent = isDark ? 'Modo Escuro' : 'Modo Claro';
     }
-    
-    // Função para alternar o tema
-    function toggleTheme() {
-        if (themeToggle.checked) {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            themeLabel.textContent = 'Modo Escuro';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            themeLabel.textContent = 'Modo Claro';
-        }
-    }
-    
-    // Adiciona o evento de alternar tema
-    themeToggle.addEventListener('change', toggleTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeUI();
+    });
+
+    // Inicializa o ícone e texto corretos ao carregar
+    updateThemeUI();
 });
